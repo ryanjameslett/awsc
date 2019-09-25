@@ -8,8 +8,9 @@ setup(
     install_requires=[
         'Click',
     ],
-    entry_points='''
-        [console_scripts]
-        awsc=awsc.cmds:cli
-    ''',
+    entry_points={
+        'console_scripts': [
+            'awsc = awsc.cmds:cli'
+        ]
+    }
 )
