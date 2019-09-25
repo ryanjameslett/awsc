@@ -5,3 +5,4 @@ lib64
 pyvenv.cfg
 awsc.egg-info
 pip-selfcheck.json
+__pycache__
