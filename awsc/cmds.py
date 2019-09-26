@@ -42,7 +42,7 @@ def set_profile(profile):
         profile (str): The name of the profile to set
     """
     curr_shell = '/usr/bin/zsh'
-    os.system(f'{curr_shell} -c \'echo "export AWS_PROFILE={profile}" > ./update_profile.sh\'')
+    os.system(f'{curr_shell} -c \'echo "export AWS_PROFILE={profile}\nrm -f ./update_profile.sh" > ./update_profile.sh\'')
     click.echo("Run the following command:")
     click.echo("source ./update_profile.sh")
 
