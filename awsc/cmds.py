@@ -54,8 +54,10 @@ def cli():
 
 @cli.command()
 def list(help='write list of available aws profiles'):
+    curr_profile = get_curr_profile()
     for idx, profile in enumerate(get_profiles()):
-        click.echo(f'[{idx+1}] {profile}')
+        highlight = '*' if curr_profile == profile else ' '
+        click.echo(f' [{idx+1}] {highlight} {profile}')
 
 
 @cli.command()
